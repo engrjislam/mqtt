@@ -9,13 +9,13 @@ import time
 
 
 # ---------------------- broker/server ---------------------- #
-# broker_host = "192.168.1.184"
-# broker_host = "iot.eclipse.org"
-broker_host = "test.mosquitto.org"
+# host = "iot.eclipse.org"
+# host = "test.mosquitto.org"
+host = "192.168.0.52"
 # default mqtt client port 1883 (insecure) and 8883 (secure)
-broker_port = 1883 
+port = 1883 
 # default mqtt keepalive is 60
-broker_keepalive = 60 
+keepalive = 60 
 bind_address=""
 
 # ----------------------- client info ----------------------- #
@@ -110,8 +110,8 @@ if __name__ == '__main__':
         # client.username_pw_set(username='johirulislam')
         # client.username_pw_set(username='roger', password='password')
      
-        # client.connect(broker_host, broker_port, broker_keepalive, bind_address)
-        client.connect(broker_host)
+        # client.connect(host, port, keepalive, bind_address)
+        client.connect(host)
      
         # Process network traffic and dispatch callbacks. This will also handle
         # reconnecting. Check the documentation at
